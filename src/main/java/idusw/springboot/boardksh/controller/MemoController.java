@@ -1,7 +1,7 @@
-package idusw.springboot.board3a.controller;
+package idusw.springboot.boardksh.controller;
 
-import idusw.springboot.board3a.domain.Memo;
-import idusw.springboot.board3a.service.MemoService;
+import idusw.springboot.boardksh.domain.Memo;
+import idusw.springboot.boardksh.service.MemoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/memos")
 public class MemoController {
-    // 생성자 주입 (Constructor DI)
+    // 생성자 주입 (Constructor Dependency Injection) VS IoC(Inversion of Control) 기법 중 하나 DI, DL ...
     MemoService memoService;
 
     public MemoController(MemoService memoService) {

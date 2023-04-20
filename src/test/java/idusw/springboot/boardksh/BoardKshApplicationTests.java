@@ -1,10 +1,10 @@
-package idusw.springboot.board3a;
+package idusw.springboot.boardksh;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BoradThymleafApplicationTests {
+class BoardKshApplicationTests {
 
     @Test
     void contextLoads() {

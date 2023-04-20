@@ -1,8 +1,8 @@
-package idusw.springboot.board3a.service;
+package idusw.springboot.boardksh.service;
 
-import idusw.springboot.board3a.domain.Memo;
-import idusw.springboot.board3a.entity.MemoEntity;
-import idusw.springboot.board3a.repository.MemoRepository;
+import idusw.springboot.boardksh.domain.Memo;
+import idusw.springboot.boardksh.entity.MemoEntity;
+import idusw.springboot.boardksh.repository.MemoRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 @Service(value="Impl") // @Service : stereo type, Spring Framework에게 컴포넌트임을 알려줌
 public class MemoServiceImpl implements MemoService {
     MemoRepository memoRepository;
-    public MemoServiceImpl(MemoRepository memoRepository) { // 생성자 주입
+    public MemoServiceImpl(MemoRepository memoRepository) {
         // Spring Framework가 MemoRepository 인터페이스를 구현한 인스턴스를 배정함
         this.memoRepository = memoRepository;
     }
@@ -34,7 +34,7 @@ public class MemoServiceImpl implements MemoService {
     @Override
     public List<Memo> readList() {
         // 테이블로 부터 모두 읽어와 객체의 리스트로 반환
-        // entity : Serivce <-> Repository
+        // entity : Service <-> Repository
         List<Memo> result = new ArrayList<>(); // Memo 객체를 원소로 갖는 리스트형 객체를 생성, 배정
         List<MemoEntity> entities = memoRepository.findAll(); // select * from a_memo;
         for(MemoEntity e : entities) {
